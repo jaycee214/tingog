@@ -1,7 +1,4 @@
-import { Report } from "./app/shared/models/report";
-import { Tag } from "./app/shared/models/tag";
-
-export const sample_reports: Report[] = [
+export const sample_reports: any[] = [
     {
         id: '1',
         title: 'Report 1',
@@ -53,9 +50,26 @@ export const sample_reports: Report[] = [
     },
 ]
 
-export const sample_tags:Tag[] = [
+export const sample_tags:any[] = [
     { name: 'All'},
     { name: 'corruption'},
     { name: 'politics'},
     { name: 'abuse'}
 ]
+
+export const sample_users: any[] = [
+    {
+      name: 'JC Ocang',
+      email: 'jcocang@gmail.com',
+      password: '12345',
+      address: 'Philippines',
+      isAdmin: true,
+    },
+    {
+      name: 'Rica Dupal',
+      email: 'rica@gmail.com',
+      password: '12345',
+      address: 'Philippines',
+      isAdmin: false,
+    },
+  ];

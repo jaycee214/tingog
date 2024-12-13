@@ -6,11 +6,11 @@ header{
 }
 
 a{
-    color: #af1313;
+    color: #800000;
 }
 
 a:hover{
-    background: #e72929;
+    background: #007BFF;
     color: white;
     cursor: pointer;
 }

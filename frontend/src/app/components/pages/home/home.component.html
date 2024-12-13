@@ -2,6 +2,7 @@
 <app-tags></app-tags>
 <div class="container">
     <div class="posts">
+        <app-not-found [visible]="!reports || !reports.length" resetLinkText="Reset Search"></app-not-found>
         <ul>
             <li *ngFor="let report of reports">
                 <a routerLink="/report/{{report.id}}">
@@ -19,24 +20,13 @@
                         {{report.tags}}
                     </div>
                     <div class="post">
-                        {{report.post}}
+                        {{truncatePost(report.post)}}
                     </div>
                 </div>
             </li>
         </ul>
     </div>
     <div class="login">
-        <h2>Login</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-            <button type="submit">Login</button>
-        </form>
+        <app-login-page></app-login-page>
     </div>
 </div>

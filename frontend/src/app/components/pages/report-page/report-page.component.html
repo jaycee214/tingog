@@ -1,0 +1,20 @@
+<app-not-found [visible]="!report" notFoundMessage="Report Not Found" resetLinkText="Back To Home"></app-not-found>
+<div *ngIf="report" class="container">
+    <img [src]="report.imageUrl" [alt]="report.title"/>
+
+    <div class="'details">
+        <div class="header">
+            <span class="title">
+                {{report.title}}
+            </span>
+            <span class="tags">
+                <a *ngFor="let tag of report.tags" routerLink="/tag/{{tag}}">
+                    {{tag}}
+                </a>
+            </span>
+            <span class="description">
+                {{report.post}}
+            </span>
+        </div>
+    </div>
+</div>

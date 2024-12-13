@@ -13,7 +13,9 @@ import { CommonModule } from '@angular/common';
 export class TagsComponent {
   tags?:Tag[];
   constructor(reportService:ReportService){
-    this.tags = reportService.getAllTags();
+    reportService.getAllTags().subscribe(serverTags =>{
+      this.tags = serverTags;
+    });
   }
 
   ngOnInit():void{
