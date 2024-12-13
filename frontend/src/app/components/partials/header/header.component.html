@@ -6,12 +6,12 @@
                 <li>
                     <a routerLink="/">Home</a>
                 </li>
-                <li class="menu-container">
-                    <a routerLink="/dashboard">Juan</a>
+                <li *ngIf="user.token" class="menu-container">
+                    <a routerLink="/dashboard">{{user.name}}</a>
                     <div class="menu">
                         <a routerLink="/profile">Profile</a>
                         <a routerLink="/reports">Reports</a>
-                        <a>Logout</a>
+                        <a (click)="logout()">Logout</a>
                     </div>
                 </li>
                 <li>
